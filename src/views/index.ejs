@@ -1,0 +1,27 @@
+<html>
+    <%- include("./layouts/head.ejs", {titulo: "Trivia game", link: "./styles/index.css"}); %>
+    <body>
+        <div class="box">
+            <div class="header">
+                <h1> ¿Cuanto sabes de futbol? </h1>
+            </div>
+            <div class="form">
+                <span> Logueate </span>
+                <form action="/login" method="post">
+                    <input type="Email" name="email" placeholder="Insert Email" required>
+                    <input type="password" name="password" placeholder="Insert Password" required>
+                    <button type="submit">
+                        Login
+                    </button>
+                </form>
+                <% if (MessageErr) { %>
+                    <div class="msgErr"><%=  MessageErr  %> </div>
+                <% } %>
+                <div class="register">
+                    <span> ¿No tienes cuenta? </span>
+                    <a href="/signup">Registrate ya!</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

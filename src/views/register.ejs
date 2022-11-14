@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <%- include("./layouts/head.ejs", {titulo: "Signup", link: "./styles/index.css"}) %>
+    </head>
+    <body>
+            <div class="box">
+                <div class="header">
+                    <h1> Registrate </h1>
+                </div>
+                <div class="form">
+                    <form action="/signup" method="post">
+                        <input type="email" name="email" id="email">
+                        <input type="password" name="password" id="password">
+                        <button type="submit"> Enviar </button>
+                    </form>
+                    <div class="register">
+                        <span>
+                            <% if (Message) { %>
+                                <%= Message %> 
+                            <% } %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
